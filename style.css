@@ -26,5 +26,11 @@ box-shadow: none !important;
 [class*="ButtonInner"],
 .Root__nav-bar {
     border: 1px solid #39ff14 !important;
-    
+    background-color: rgba(2, 10, 2, 0.8) !important;
+}
+[class*="Button"]:hover {
+    background-color: #39ff14 !important;
+
+}
+}color: #020a02 !important;
 }
