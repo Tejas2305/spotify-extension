@@ -1,0 +1,30 @@
+/* Military style override */
+body,
+#main,
+.Root,
+.Root__top-container,
+.Root__nav-bar,
+.Root__main-view,
+.main-view-container__scroll-node-child {
+
+}background-color: #020a02 !important;
+background-image: linear-gradient(0deg, transparent 24%, rgba(0, 255, 0, 0.05) 25%, rgba(0, 255, 0, 0.05) 26%, transparent 27%, transparent 74%, rgba(0, 255, 0, 0.05) 75%, rgba(0, 255, 0, 0.05) 76%, transparent 77%, transparent), linear-gradient(90deg, transparent 24%, rgba(0, 255, 0, 0.05) 25%, rgba(0, 255, 0, 0.05) 26%, transparent 27%, transparent 74%, rgba(0, 255, 0, 0.05) 75%, rgba(0, 255, 0, 0.05) 76%, transparent 77%, transparent) !important;
+background-size: 50px 50px !important;
+}
+* {
+    font-family: "Courier New", Courier, monospace !important;
+    color: #39ff14 !important;
+
+}text-transform: uppercase !important;
+border-radius: 0 !important;
+box-shadow: none !important;
+}
+[class*="card"],
+[class*="Button"],
+[class*="cover"],
+[class*="image"],
+[class*="ButtonInner"],
+.Root__nav-bar {
+    border: 1px solid #39ff14 !important;
+    
+}
