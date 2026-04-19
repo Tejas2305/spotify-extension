@@ -61,4 +61,26 @@ border-left: 1px solid #39ff14;
     border-radius: 0;
 }
 
+}/* Scanline animation */
+@keyframes scanline {
+    0% {
+        transform: translateY(-100%);
+    }
+
+    }
+}100% {
+    transform: translateY(100vh);
 }
+
+}}
+body::after {
+    content: " ";
+
+}display: block;
+position: fixed;
+top: 0;
+left: 0;
+width: 100vw;
+height: 10vh;
+
+border: 1px solid red !important;
