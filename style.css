@@ -34,3 +34,31 @@ box-shadow: none !important;
 }
 }color: #020a02 !important;
 }
+/* Night vision filter for images */
+img,
+[style*="background-image"],
+svg {
+    filter: invert(15%) sepia(100%) saturate(600%) hue-rotate(85deg) brightness(80%) contrast(150%) !important;
+}
+p,
+span,
+h1,
+
+}h2,
+h3,
+h4,
+h5,
+h6,
+a {
+    text-shadow: 0 0 2px rgba(57, 255, 20, 0.5) !important;
+
+}width: 10px;
+background-color: #020a02;
+border-left: 1px solid #39ff14;
+}
+::-webkit-scrollbar-thumb {
+    background-color: #39ff14;
+    border-radius: 0;
+}
+
+}
