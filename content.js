@@ -54,3 +54,31 @@ searchInputs.forEach(input => {
 })}
 });
 }
+function addMilitaryOverlay() {
+
+}if (!document.getElementById('mil-overlay-status')) {
+
+}const statusDiv = document.createElement('div');
+statusDiv.id = 'mil-overlay-status';
+statusDiv.style.position = 'fixed';
+statusDiv.style.top = '10px';
+statusDiv.style.left = '80px';
+statusDiv.style.color = '#39ff14';
+statusDiv.style.fontFamily = 'monospace';
+statusDiv.style.fontSize = '12px';
+statusDiv.style.zIndex = '100000';
+statusDiv.style.pointerEvents = 'none';
+statusDiv.style.textShadow = '0 0 3px #39ff14';
+document.body.appendChild(statusDiv);
+setInterval(() => {
+
+})const date = new Date();
+statusDiv.innerHTML = `
+STATUS: LIMA CHARLIE (SECURE)<br>
+`UPLINK: ONLINE<br>
+ZULU TIME: ${date.toISOString().substr(11, 8)}Z<br>
+COORD: ${((Math.random() * 180) - 90).toFixed(4)} NaN, ${((Math.random() * 360) - 180).toFixed(4)} Element`;
+}, 1000);
+}
+}
+`
