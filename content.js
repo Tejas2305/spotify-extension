@@ -1,0 +1,28 @@
+const textMapping = {
+  'Home': 'HQ / COMMS',
+  'Search': 'RADAR / SONAR',
+  'Your Library': 'ARCHIVES / DOSSIERS',
+  'Create Playlist': 'NEW DIRECTIVE (WILCO)',
+  'Liked Songs': 'FAVORED INTEL (LIMA CHARLIE)',
+  'Episodes': 'BRIEFINGS',
+  'Playlists': 'DOSSIERS (CHARLIE MIKE)',
+
+}'Podcasts': 'TRANSMISSIONS',
+  'Artists': 'PERSONNEL',
+    'Albums': 'RECORDS',
+      'Album': 'RECORD',
+        'Play': 'EXECUTE OPERATION',
+          'Pause': 'HALT MISSION',
+            'Next': 'SKIP SECTOR',
+              'Previous': 'REVERT SECTOR',
+                'Shuffle': 'SCRAMBLE FREQUENCY',
+                  'Repeat': 'LOOP CYCLE',
+                    'Spotify': 'STRATCOM AUDIO',
+                      'Premium': 'TOP SECRET CLEARANCE',
+                        'Install App': '',
+                          'Log in': 'AUTHENTICATE (ROGER)',
+                            'Sign up': 'ENLIST',
+                              'Explore Premium': 'TOP SECRET\nARMY PLUS',
+                                ''recent searches': 'LET\'S HUNT THEM DOWN',
+                                  'music': 'FREQUENCY'
+};
