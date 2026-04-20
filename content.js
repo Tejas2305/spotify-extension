@@ -137,6 +137,9 @@ document.body.appendChild(warning);
 } else {
   if (warning) {
     warning.remove();
-    
+  }
+}
+}
+
   }
 }
