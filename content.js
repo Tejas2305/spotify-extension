@@ -106,5 +106,37 @@ const muteBtn = document.querySelector('button[aria-label="Mute"]');
 const unmuteBtn = document.querySelector('button[aria-label="Unmute"]');
 if (isAd && !isAdCurrentlyPlaying) {
   console.log("INTRUDER DETECTED (Ad playing). Initiating radio silence.");
+
+}function showAdBlockedWarning(show) {
+
+}let warning = document.getElementById('mil-ad-warning');
+if (show) {
+
+  if (!warning) {
+    warning = document.createElement('div');
+    warning.id = 'mil-ad-warning';
+    warning.style.position = 'fixed';
+    warning.style.top = '50%';
   
+    warning.style.left = '50%';
+    warning.style.transform = 'translate(-50%, -50%)';
+    warning.style.backgroundColor = 'rgba(255, 0, 0, 0.8)';
+    warning.style.color = '#fff';
+
+  }
+}warning.style.border = '2px solid red';
+warning.style.padding = '20px';
+warning.style.fontSize = '24px';
+warning.style.fontFamily = 'monospace';
+warning.style.zIndex = '999999';
+warning.style.textTransform = 'uppercase';
+warning.style.boxShadow = '0 0 20px red';
+warning.innerHTML = "ENEMY TRANSMISSION DETECTED (Ad Blocked)<br>PLAYING HOLDING SIGNAL...";
+document.body.appendChild(warning);
+}
+} else {
+  if (warning) {
+    warning.remove();
+    
+  }
 }
