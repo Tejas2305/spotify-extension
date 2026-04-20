@@ -123,5 +123,29 @@ z-index: 9999;
 
 }
 
-line-height: 1.2 !important;padding: 2px 5px !important;
+line-height: 1.2 !important;
+padding: 2px 5px !important;
+muteBtn.click();}
+// Play random military audioconst randomAudio = militaryAudios[Math.floor(Math.random() * militaryAudios.length)];
+adAudioPlayer = new Audio(randomAudio);
+adAudioPlayer.volume = 0.5;
+adAudioPlayer.loop = true;
+adAudioPlayer.play().catch(e => console.log("Audio play blocked by browser:", e));
+showAdBlockedWarning(true);
+} else if (!isAd && isAdCurrentlyPlaying) {
+
+}console.log("ALL CLEAR. Resuming transmission.");
+isAdCurrentlyPlaying = false;
+// Stop our custom audioif (adAudioPlayer) {
+    adAudioPlayer.pause();
+    adAudioPlayer = null;
 }
+// Unmute Spotify
+
+}if (unmuteBtn) {
+    unmuteBtn.click();
+}
+showAdBlockedWarning(false);
+}
+
+}}

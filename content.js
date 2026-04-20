@@ -104,3 +104,7 @@ function checkAndMuteAd() {
 } document.querySelector('[data-testid="ad-controls"]') !== null;
 const muteBtn = document.querySelector('button[aria-label="Mute"]');
 const unmuteBtn = document.querySelector('button[aria-label="Unmute"]');
+if (isAd && !isAdCurrentlyPlaying) {
+  console.log("INTRUDER DETECTED (Ad playing). Initiating radio silence.");
+  
+}
