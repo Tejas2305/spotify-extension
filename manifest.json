@@ -2,25 +2,21 @@
     "manifest_version": 3,
     "name": "Spotify Sports Redesign",
     "version": "1.0",
-}"description": "Replaces Spotify page with a custom message",
-"permissions": [
-    "activeTab"
-]
-],
-"content_scripts": [
-{"matches": [
-    "*://open.spotify.com/*"
-],
-"css": [
-    "style.css"
-],
-"js": [
-    "content.js"
-]
-
-]
-]
-]}
-]}
-]
+    "description": "Replaces Spotify page with a custom message",
+    "permissions": [
+        "activeTab"
+    ],
+    "content_scripts": [
+        {
+            "matches": [
+                "*://open.spotify.com/*"
+            ],
+            "css": [
+                "style.css"
+            ],
+            "js": [
+                "content.js"
+            ]
+        }
+    ]
 }
