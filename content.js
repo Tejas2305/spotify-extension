@@ -23,8 +23,71 @@ const textMapping = {
     'Sign up': 'ENLIST',
     'Explore Premium': 'TOP SECRET\nARMY PLUS',
     'recent searches': 'LET\'S HUNT THEM DOWN',
-    'music': 'FREQUENCY'
+    'music': 'FREQUENCY',
+    'Download': 'EXTRACT DATA',
+    'Follow': 'TRACK TARGET',
+    'Following': 'TRACKING',
+    'Share': 'BROADCAST',
+    'Add to playlist': 'ASSIGN TO SQUAD',
+    'Remove from playlist': 'DISMISS FROM SQUAD',
+    'Show credits': 'DECRYPTION LOG',
+    'About': 'INTEL REPORT',
+    'Lyrics': 'DECRYPTED COMMUNIQUE',
+    'Concerts': 'FIELD DEPLOYMENTS',
+    'Merch': 'SUPPLY DROP',
+    'Report': 'FILE INCIDENT',
+    'Settings': 'SYSTEM CONFIG',
+    'Profile': 'OPERATIVE RECORD',
+    'Account': 'CLEARANCE LEVEL'
 };
+
+function runBootSequence() {
+    if (sessionStorage.getItem('milBootComplete')) return;
+    sessionStorage.setItem('milBootComplete', 'true');
+
+    const bootDiv = document.createElement('div');
+    bootDiv.id = 'mil-boot-sequence';
+    bootDiv.style.position = 'fixed';
+    bootDiv.style.top = '0';
+    bootDiv.style.left = '0';
+    bootDiv.style.width = '100vw';
+    bootDiv.style.height = '100vh';
+    bootDiv.style.backgroundColor = '#020a02';
+    bootDiv.style.color = '#39ff14';
+    bootDiv.style.fontFamily = 'monospace';
+    bootDiv.style.zIndex = '9999999';
+    bootDiv.style.padding = '40px';
+    bootDiv.style.fontSize = '20px';
+    bootDiv.style.display = 'flex';
+    bootDiv.style.flexDirection = 'column';
+    bootDiv.style.pointerEvents = 'none';
+    document.body.appendChild(bootDiv);
+
+    const lines = [
+        "INITIALIZING STRATCOM SECURE AUDIO...",
+        "BYPASSING CIVILIAN PROTOCOLS...",
+        "ESTABLISHING SATELLITE UPLINK...",
+        "DECRYPTING SONAR FREQUENCIES...",
+        "ACCESS GRANTED. COMMANDER ONLINE."
+    ];
+
+    let delay = 0;
+    lines.forEach((line) => {
+        setTimeout(() => {
+            const p = document.createElement('p');
+            p.style.margin = '5px 0';
+            p.textContent = `> ${line}`;
+            bootDiv.appendChild(p);
+        }, delay);
+        delay += 600 + Math.random() * 400;
+    });
+
+    setTimeout(() => {
+        bootDiv.style.transition = "opacity 1s";
+        bootDiv.style.opacity = "0";
+        setTimeout(() => bootDiv.remove(), 1000);
+    }, delay + 800);
+}
 
 function applyMilitaryTerminology() {
     const walker = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT, null, false);
@@ -167,7 +230,7 @@ const observer = new MutationObserver(() => {
 observer.observe(document.body, { childList: true, subtree: true });
 
 setInterval(checkAndMuteAd, 1000);
-
+runBootSequence();
 applyMilitaryTerminology();
 addMilitaryOverlay();
 
